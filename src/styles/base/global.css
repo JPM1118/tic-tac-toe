@@ -1,0 +1,17 @@
+body {
+  font-family: "comfortaa", cursive;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  position: absolute;
+  left: -99999999px;
+}
+
+.padding-bottom {
+  padding-bottom: 120px;
+}

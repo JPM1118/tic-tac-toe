@@ -1,0 +1,68 @@
+.pick-a-side {
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  /* visibility: hidden; */
+
+  &__wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    border: black solid 2px;
+    background-color: white;
+  }
+  h1 {
+    font-size: 4em;
+    @mixin atSmall {
+      font-size: 5em;
+    }
+  }
+  span {
+    display: inline-block;
+    margin-bottom: 60px;
+  }
+  &__x {
+    margin-right: 15px;
+    font-size: 2em;
+    transition: transform 0.3s ease-out;
+    transform: scale(1);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+      color: blue;
+    }
+    @mixin atSmall {
+      font-size: 3em;
+    }
+  }
+  &__line {
+    font-size: 3em;
+    @mixin atSmall {
+      font-size: 4em;
+    }
+  }
+  &__o {
+    font-size: 2em;
+    margin-left: 15px;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+      color: blue;
+    }
+    @mixin atSmall {
+      font-size: 3em;
+    }
+  }
+}

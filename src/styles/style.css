@@ -1,0 +1,10 @@
+@import "normalize.css";
+@import "base/global.css";
+@import "base/mixins.css";
+@import "base/variable.css";
+@import "base/wrapper.css";
+@import "modules/pick-a-side.css";
+@import "modules/grid.css";
+@import "modules/winner.css";
+@import "modules/loser.css";
+@import "modules/tie.css";

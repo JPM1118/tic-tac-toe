@@ -1,0 +1,44 @@
+.winner {
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
+
+  &__wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 750px;
+    height: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    border: black solid 2px;
+    background-color: white;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    &:hover {
+      color: blue;
+    }
+  }
+
+  &__text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4em;
+    color: green;
+  }
+}
