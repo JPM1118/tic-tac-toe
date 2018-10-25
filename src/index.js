@@ -60,25 +60,27 @@ function pickSideFunctions(e) {
 
 function boardClickFunctions(e) {
   let id = parseInt(e.target.id);
-  insertMove(boardNodes, id, human);
-  board[id] = human;
-  let computerMove = miniMax(board, computer);
-  if (checkIfTerminal(board, human) == "win") {
-    displayWinner(board, human, boardNodes);
-    winner.style.visibility = "visible";
-  } else if (checkIfTerminal(board, human) == "tie") {
-    tie.style.visibility = "visible";
-  } else {
-    insertMove(boardNodes, computerMove.index, computer);
-    board[computerMove.index] = computer;
-    setTimeout(function() {
-      if (checkIfTerminal(board, computer) == "win") {
-        displayWinner(board, computer, boardNodes);
-        loser.style.visibility = "visible";
-      } else if (checkIfTerminal(board, computer) == "tie") {
-        tie.style.visibility = "visible";
-      }
-    }, 300);
+  if (typeof board[id] === "number") {
+    insertMove(boardNodes, id, human);
+    board[id] = human;
+    let computerMove = miniMax(board, computer);
+    if (checkIfTerminal(board, human) == "win") {
+      displayWinner(board, human, boardNodes);
+      winner.style.visibility = "visible";
+    } else if (checkIfTerminal(board, human) == "tie") {
+      tie.style.visibility = "visible";
+    } else {
+      insertMove(boardNodes, computerMove.index, computer);
+      board[computerMove.index] = computer;
+      setTimeout(function() {
+        if (checkIfTerminal(board, computer) == "win") {
+          displayWinner(board, computer, boardNodes);
+          loser.style.visibility = "visible";
+        } else if (checkIfTerminal(board, computer) == "tie") {
+          tie.style.visibility = "visible";
+        }
+      }, 300);
+    }
   }
 }
 
